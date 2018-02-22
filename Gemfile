@@ -25,6 +25,7 @@ gem 'rack-cors'
 
 # OmniAuth: Standardized Multi-Provider Authentication
 gem 'omniauth', '~> 1.8.1'
+gem 'omniauth-oauth2', '~> 1.5.0'
 # Flexible authentication solution for Rails with Warden
 gem 'devise', '~> 4.4'
 
