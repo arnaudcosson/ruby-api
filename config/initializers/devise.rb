@@ -14,7 +14,7 @@ Devise.setup do |config|
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class
   # with default "from" parameter.
-  config.mailer_sender = 'please-change-me-at-config-initializers-devise@example.com'
+  config.mailer_sender = 'please-change-me-at-config-initializers-devise@ex.com'
 
   # Configure the class responsible to send e-mails.
   # config.mailer = 'Devise::Mailer'
@@ -38,11 +38,13 @@ Devise.setup do |config|
   # or not authentication should be aborted when the value is not present.
   # config.authentication_keys = [:email]
 
-  # Configure parameters from the request object used for authentication. Each entry
-  # given should be a request method and it will automatically be passed to the
-  # find_for_authentication method and considered in your model lookup. For instance,
-  # if you set :request_keys to [:subdomain], :subdomain will be used on authentication.
-  # The same considerations mentioned for authentication_keys also apply to request_keys.
+  # Configure parameters from the request object used for authentication. Each
+  # entry given should be a request method and it will automatically be passed to the
+  # find_for_authentication method and considered in your model lookup.
+  # For instance, if you set :request_keys to [:subdomain],
+  # :subdomain will be used on authentication.
+  # The same considerations mentioned for authentication_keys
+  # also apply to request_keys.
   # config.request_keys = []
 
   # Configure which authentication keys should be case-insensitive.
