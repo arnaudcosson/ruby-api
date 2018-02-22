@@ -29,5 +29,17 @@ module RubyApi
     # Middleware like session, flash, cookies can be added back manually.
     # Skip views, helpers and assets when generating a new resource.
     config.api_only = true
+
+    if Rails.env.development?
+      config.before_configuration do
+        env_file = File.join(Rails.root, 'config', Rails.env+'_env.yml')
+        if File.exists?(env_file)
+          YAML.load(File.open(env_file)).each do |key, value|
+            ENV[key.to_s] = value
+          end
+        end
+      end
+    end
+
   end
 end
