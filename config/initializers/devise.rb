@@ -8,13 +8,13 @@ Devise.setup do |config|
   # confirmation, reset password and unlock tokens in the database.
   # Devise will use the `secret_key_base` as its `secret_key`
   # by default. You can change it below and use your own secret key.
-  # config.secret_key = '00b2c639389e45a72f8e68bc73bba7674c1c42d589f9248b1a34f07ae48aed6f0505078612542487bfce5c8cb4d1a03a772a94821a9d931ae21b2ef2cac7c4da'
+  # config.secret_key = 'b6d86ae5012e763c8539c19c11c5cff9d90bb867b403d3ade7b0f37322c233938e18d712541b75508a6645dd32a4f2a1addeaea44290be3df03cd4eee047680b'
 
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class
   # with default "from" parameter.
-  config.mailer_sender = 'please-change-me-at-config-initializers-devise@ex.com'
+  config.mailer_sender = 'please-change-me-at-config-initializers-devise@example.com'
 
   # Configure the class responsible to send e-mails.
   # config.mailer = 'Devise::Mailer'
@@ -38,13 +38,11 @@ Devise.setup do |config|
   # or not authentication should be aborted when the value is not present.
   # config.authentication_keys = [:email]
 
-  # Configure parameters from the request object used for authentication. Each
-  # entry given should be a request method and it will automatically be passed to the
-  # find_for_authentication method and considered in your model lookup.
-  # For instance, if you set :request_keys to [:subdomain],
-  # :subdomain will be used on authentication.
-  # The same considerations mentioned for authentication_keys
-  # also apply to request_keys.
+  # Configure parameters from the request object used for authentication. Each entry
+  # given should be a request method and it will automatically be passed to the
+  # find_for_authentication method and considered in your model lookup. For instance,
+  # if you set :request_keys to [:subdomain], :subdomain will be used on authentication.
+  # The same considerations mentioned for authentication_keys also apply to request_keys.
   # config.request_keys = []
 
   # Configure which authentication keys should be case-insensitive.
@@ -112,7 +110,7 @@ Devise.setup do |config|
   config.stretches = Rails.env.test? ? 1 : 11
 
   # Set up a pepper to generate the hashed password.
-  # config.pepper = '7ee6ca06b51dbf23ea610dc6d1ef2eae423e91c733c204a917eff0f9c6e6336bc70680307f8fb6b29fd78a8a63aa7ff78a1394fb1c64cdf1bf4ff99c1e3fffd4'
+  # config.pepper = '0d95e18b6edb598975cb0438f6ed848fad1752742f2fb8a163d24318ee94785f06c3dc3c924b10adcfd312564aabc8bcc036bd8cc0bb69c678679008b6d6d067'
 
   # Send a notification to the original email when the user's email is changed.
   # config.send_email_changed_notification = false
@@ -255,7 +253,6 @@ Devise.setup do |config|
   # Add a new OmniAuth provider. Check the wiki for more information on setting
   # up on your models and hooks.
   # config.omniauth :github, 'APP_ID', 'APP_SECRET', scope: 'user,public_repo'
-  config.omniauth :internal_workers, ENV.fetch('OAUTH_APP_ID'), ENV.fetch('OAUTH_APP_SECRET')
 
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or

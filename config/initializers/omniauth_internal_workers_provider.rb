@@ -6,6 +6,7 @@ module OmniAuth
   module Strategies
     # Omniauth Strategy for Internal workers
     class InternalWorkers < OmniAuth::Strategies::OAuth2
+      puts 'strategie internal workers'
       # Give your strategy a name.
       option :name, 'internal_workers'
 
@@ -36,7 +37,7 @@ module OmniAuth
       end
 
       def raw_info
-        @raw_info ||= access_token.get('/userinfo').parsed
+        @raw_info ||= access_token.get('/idp/userinfo.openid').parsed
       end
     end
   end

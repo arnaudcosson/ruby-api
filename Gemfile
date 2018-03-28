@@ -12,7 +12,7 @@ gem 'rails', '~> 5.1.5'
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-# gem 'jbuilder', '~> 2.5'
+gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
@@ -30,6 +30,10 @@ gem 'omniauth', '~> 1.8.1'
 gem 'omniauth-oauth2', '~> 1.5.0'
 # Flexible authentication solution for Rails with Warden
 gem 'devise', '~> 4.4'
+# Simple authentication https://github.com/gonzalo-bulnes/simple_token_authentication
+gem 'simple_token_authentication', '~> 1.0'
+# Soft deletion
+gem "paranoia", "~> 2.0"
 
 gem 'mysql2', '~> 0.4.10'
 
